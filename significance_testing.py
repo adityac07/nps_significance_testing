@@ -268,12 +268,14 @@ class SigTester:
         plt.rcParams['font.size'] = '18'
 
         # Plot the distribution of simulated differences in NPS
-        ax = sns.kdeplot(self._simulated_differences_in_nps, shade=True)
-        ax.set(xlabel='Absolute Difference in NPS Scores Between Groups',
-               ylabel='Proportion of Simulations',
-               title='How Surprising Is Our Observed Result?')
+        density_plot = sns.kdeplot(self._simulated_differences_in_nps, shade=True)
+        density_plot.set(
+            xlabel='Absolute Difference in NPS Scores Between Groups',
+            ylabel='Proportion of Simulations',
+            title='How Surprising Is Our Observed Result?'
+        )
 
-        # Add a line to show the actual difference we observed in our data
-        ax.axvline(x=self._observed_difference_in_nps, color='red', linestyle='--')
+        # Add a line to show the actual difference observed in the data
+        density_plot.axvline(x=self._observed_difference_in_nps, color='red', linestyle='--')
         plt.legend(labels=['Observed Difference', 'Simulated'], loc='upper right')
         plt.show()
