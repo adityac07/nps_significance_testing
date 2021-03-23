@@ -1,4 +1,4 @@
-# nps_significance_testing
+# NPS Significance Testing
 This repo contains the accompanying code to the Medium article [xxx](xxx), detailing how you can use permutation 
 testing to determine whether the [NPS](https://en.wikipedia.org/wiki/Net_Promoter) scores collected from two groups 
 are significantly different.
