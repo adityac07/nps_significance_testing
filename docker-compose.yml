@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  nps_significance_testing_dev:
+    build: .
+    container_name: nps_sig_dev
+    volumes:
+      - ./:/usr/src/app

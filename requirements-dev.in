@@ -1,0 +1,6 @@
+-r requirements.in
+
+coverage
+flake8
+pylint
+pytest
