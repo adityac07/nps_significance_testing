@@ -1,7 +1,9 @@
 # NPS Significance Testing
-This repo contains the accompanying code to the Medium article [xxx](xxx), detailing how you can use permutation 
-testing to determine whether the [NPS](https://en.wikipedia.org/wiki/Net_Promoter) scores collected from two groups 
-are significantly different.
+This repo contains the accompanying code to the Medium article 
+[The Power Of Permutation Testing](https://kieran-95138.medium.com/the-power-of-permutation-testing-c2ac66f2d166), 
+detailing how you can use permutation testing to determine whether the 
+[NPS](https://en.wikipedia.org/wiki/Net_Promoter) scores collected from two groups are significantly different.
+
 
 ## Pre-requisites
 
@@ -23,7 +25,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r python_requirements/requirements.txt
 ```
 
 ### Option 2 (Docker)
@@ -38,9 +40,6 @@ docker-compose build
 
 # Set up container
 docker-compose up -d
-
-# Run unit tests
-docker exec nps_sig_dev /home/docker_user/.local/bin/pytest --verbose tests
 
 # Enter container
 docker exec -it nps_sig_dev bash
